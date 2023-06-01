@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TheBestApp</string>
+    <string name="greeting_message">Hey, Android!</string>
 </resources>

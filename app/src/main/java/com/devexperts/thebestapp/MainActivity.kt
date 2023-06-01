@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TheBestAppTheme {
-                GreetingScreen(greeting = "Hey, Android")
+                GreetingScreen(greeting = stringResource(id = R.string.greeting_message))
             }
         }
     }
@@ -48,6 +49,6 @@ fun GreetingScreen(greeting: String, modifier: Modifier = Modifier) {
 @Composable
 fun DefaultPreview() {
     TheBestAppTheme {
-        GreetingScreen("Hey, Android!")
+        GreetingScreen(stringResource(id = R.string.greeting_message))
     }
 }
