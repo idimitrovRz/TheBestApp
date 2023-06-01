@@ -11,7 +11,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.devexperts.thebestapp.ui.theme.TheBestAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,10 +32,15 @@ fun GreetingScreen(greeting: String, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(MaterialTheme.colors.background),
+            .background(MaterialTheme.colors.primary),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = greeting)
+        Text(
+            text = greeting,
+            color = MaterialTheme.colors.onPrimary,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Normal,
+        )
     }
 }
 
@@ -41,6 +48,6 @@ fun GreetingScreen(greeting: String, modifier: Modifier = Modifier) {
 @Composable
 fun DefaultPreview() {
     TheBestAppTheme {
-        GreetingScreen("Hey, Android")
+        GreetingScreen("Hey, Android!")
     }
 }
